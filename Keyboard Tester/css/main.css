@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  min-height: 100vh;
+  background-color: #222020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.not-supported {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222020;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  font-size: 1.7rem;
+  padding: 1em;
+  gap: 0.5em;
+  text-align: center;
+  display: none;
+}
+
+.not-supported i {
+  color: red;
+}
+
+.container {
+  position: relative;
+  margin: 2em 0;
+}
+
+.keyboard {
+  background-color: #494444;
+  padding: 1em;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(60, 1em);
+  grid-template-rows: repeat(5, 4em);
+  gap: 2px;
+}
+
+#input-text {
+  color: #929292;
+  width: 100%;
+  font-size: 2rem;
+  background: transparent;
+  margin-bottom: 0.5em;
+  border: none;
+  padding: 0.5em 0.5em;
+  border-radius: 5px;
+  cursor: default;
+}
+
+#input-text:focus {
+  outline: none;
+}
+
+.keyboard div {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #363636;
+  border-radius: 3px;
+}
+
+.keyboard div:not(.double-key) {
+  font-size: 1.4rem;
+}
+
+.double-key {
+  flex-flow: column nowrap;
+  gap: 3px;
+}
+
+.special {
+  background-color: #292929 !important;
+}
+
+.keyboard div:not(.special) {
+  grid-column: span 4;
+}
+
+.span-5 {
+  grid-column: span 5;
+}
+
+.span-6 {
+  grid-column: span 6;
+}
+
+.span-7 {
+  grid-column: span 7;
+}
+
+.span-8 {
+  grid-column: span 8;
+}
+
+.span-9 {
+  grid-column: span 9;
+}
+
+.span-11 {
+  grid-column: span 11;
+}
+
+.span-30 {
+  grid-column: span 30;
+}
+
+#Enter span {
+  transform: rotate(90deg);
+}
+
+.current-key {
+  background-color: aliceblue !important;
+  color: black;
+}
+
+#key-pressed-text {
+  display: block;
+  font-size: 1.8rem;
+  color: #929292;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#key-pressed {
+  border-bottom: 1px solid #494444;
+}
+
+@media only screen and (max-width: 1200px) {
+  .keyboard {
+    width: 90vw;
+    grid-template-columns: repeat(60, 1fr);
+  }
+
+  .keyboard div:not(.double-key) {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .not-supported {
+    display: flex;
+  }
+}

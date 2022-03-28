@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Waktu Solat Malaysia" />
+    <meta name="author" content="Aidil Iskandar" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Waktu Solat Malaysia</title>
+  </head>
+  <body>
+    <div class="mentainance">
+      <p>🚧 This site is still under development 🚧</p>
+    </div>
+    <main>
+      <h1>Waktu Solat Malaysia</h1>
+      <form id="form">
+        <div class="duration">
+          <label for="duration">Choose a duration:</label>
+          <select name="duration" id="duration"></select>
+        </div>
+        <div style="display: none" class="date">
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" />
+        </div>
+        <div class="zone">
+          <label for="zone">Choose a zone:</label>
+          <select name="zone" id="zone"></select>
+        </div>
+        <button type="submit">submit</button>
+      </form>
+      <div class="result-div">
+        <h1 id="selected-zone"></h1>
+        <div id="result"></div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2022 - Aidil Iskandar</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.mentainance {
+  width: 100%;
+  padding: 1em;
+  background-color: red;
+}
+
+.mentainance > p {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(192, 192, 192);
+}
+
+main {
+  margin: 2em auto;
+  max-width: 900px;
+  padding: 0 2em 5em 2em;
+}
+
+#form {
+  display: grid;
+  gap: 1em;
+}
+
+#form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  border: 0;
+  padding: 0.7em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.24);
+}
+
+.result-div {
+  margin-top: 1em;
+}
+
+#selected-zone {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.result > p {
+  margin-bottom: 1em;
+}
+
+.result > p:last-child {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  padding: 1em;
+  color: white;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer > p {
+  text-align: center;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./js/app.js"></script>
+    <title>Keyboard Tester</title>
+  </head>
+
+  <body>
+    <div class="not-supported">
+      <i class="fa-solid fa-circle-exclamation"></i>
+      <span>
+        Your windows's width size is too small.
+        <br />
+        Mininum: 600px
+      </span>
+    </div>
+
+    <div class="container">
+      <input id="input-text" type="text" placeholder="Type anything" spellcheck="false" />
+      <div class="keyboard">
+        <div class="double-key" id="Backquote">
+          <span>&tilde;</span>
+          <span>&#96;</span>
+        </div>
+        <div class="double-key" id="Digit1">
+          <span>&excl;</span>
+          <span>1</span>
+        </div>
+        <div class="double-key" id="Digit2">
+          <span>&#64;</span>
+          <span>2</span>
+        </div>
+        <div class="double-key" id="Digit3">
+          <span>&#35;</span>
+          <span>3</span>
+        </div>
+        <div class="double-key" id="Digit4">
+          <span>&#36;</span>
+          <span>4</span>
+        </div>
+        <div class="double-key" id="Digit5">
+          <span>&percnt;</span>
+          <span>5</span>
+        </div>
+        <div class="double-key" id="Digit6">
+          <span>&#94;</span>
+          <span>6</span>
+        </div>
+        <div class="double-key" id="Digit7">
+          <span>&#38;</span>
+          <span>7</span>
+        </div>
+        <div class="double-key" id="Digit8">
+          <span>&ast;</span>
+          <span>8</span>
+        </div>
+        <div class="double-key" id="Digit9">
+          <span>&lpar;</span>
+          <span>9</span>
+        </div>
+        <div class="double-key" id="Digit0">
+          <span>&rpar;</span>
+          <span>0</span>
+        </div>
+        <div class="double-key" id="Minus">
+          <span>&dash;</span>
+          <span>&lowbar;</span>
+        </div>
+        <div class="double-key" id="Equal">
+          <span>&plus;</span>
+          <span>&#8215;</span>
+        </div>
+        <div class="special span-8" id="Backspace"><i class="fa-solid fa-delete-left"></i></div>
+        <div class="special span-6" id="Tab"><i class="fa-solid fa-right-left"></i></div>
+        <div id="KeyQ">Q</div>
+        <div id="KeyW">W</div>
+        <div id="KeyE">E</div>
+        <div id="KeyR">R</div>
+        <div id="KeyT">T</div>
+        <div id="KeyY">Y</div>
+        <div id="KeyU">U</div>
+        <div id="KeyI">I</div>
+        <div id="KeyO">O</div>
+        <div id="KeyP">P</div>
+        <div class="double-key" id="BracketLeft">
+          <span>&lcub;</span>
+          <span>&lbrack;</span>
+        </div>
+        <div class="double-key" id="BracketRight">
+          <span>&rcub;</span>
+          <span>&rbrack;</span>
+        </div>
+        <div class="double-key" style="grid-column: span 6" id="Backslash">
+          <span>&#124;</span>
+          <span>&bsol;</span>
+        </div>
+        <div class="special span-7" id="CapsLock">Caps</div>
+        <div id="KeyA">A</div>
+        <div id="KeyS">S</div>
+        <div id="KeyD">D</div>
+        <div id="KeyF">F</div>
+        <div id="KeyG">G</div>
+        <div id="KeyH">H</div>
+        <div id="KeyJ">J</div>
+        <div id="KeyK">K</div>
+        <div id="KeyL">L</div>
+        <div class="double-key" id="Semicolon">
+          <span>&colon;</span>
+          <span>&semi;</span>
+        </div>
+        <div class="double-key" id="Quote">
+          <span>&quot;</span>
+          <span>&apos;</span>
+        </div>
+        <div class="special span-9" id="Enter">
+          <span><i class="fa-solid fa-arrow-turn-down"></i></span>
+        </div>
+        <div class="special span-9" id="ShiftLeft"><i class="fa-solid fa-arrow-up"></i></div>
+        <div id="KeyZ">Z</div>
+        <div id="KeyX">X</div>
+        <div id="KeyC">C</div>
+        <div id="KeyV">V</div>
+        <div id="KeyB">B</div>
+        <div id="KeyN">N</div>
+        <div id="KeyM">M</div>
+        <div class="double-key" id="Comma">
+          <span>&lt;</span>
+          <span>&comma;</span>
+        </div>
+        <div class="double-key" id="Period">
+          <span>&gt;</span>
+          <span>&period;</span>
+        </div>
+        <div class="double-key" id="Slash">
+          <span>&quest;</span>
+          <span>&sol;</span>
+        </div>
+        <div class="special span-11" id="ShiftRight"><i class="fa-solid fa-arrow-up"></i></div>
+        <div class="special span-7" id="ControlLeft">Ctrl</div>
+        <div class="special span-8" id="AltLeft">Alt</div>
+        <div class="special span-30" id="Space"></div>
+        <div class="special span-7" id="AltRight">Alt</div>
+        <div class="special span-8" id="ControlRight">Ctrl</div>
+      </div>
+      <span id="key-pressed-text">
+        Last Key Pressed:
+        <span id="key-pressed">&lt;key&gt;</span>
+      </span>
+    </div>
+  </body>
+</html>
