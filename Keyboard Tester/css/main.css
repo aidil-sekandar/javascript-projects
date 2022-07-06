@@ -160,4 +160,7 @@ body {
   .not-supported {
     display: flex;
   }
+  
+  .container {
+    display: none;
 }
