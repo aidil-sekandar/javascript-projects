@@ -1,6 +1,6 @@
 // elements
 const form = document.getElementById("form");
-const result = document.querySelector("#result");
+const results = document.querySelector("#results");
 const zone_select = document.getElementById("zone");
 const duration_select = document.getElementById("duration");
 const date = document.getElementById("date").value;
@@ -37,20 +37,67 @@ const fetchData = async () => {
   appendDurationOption(data["durations"]);
 };
 
+const checkDate = (data) => {
+  const hariMal = {
+    Monday: "Isnin",
+    Tuesday: "Selasa",
+    Wednesday: "Rabu",
+    Thursday: "Khamis",
+    Friday: "Jumaat",
+    Saturday: "Sabtu",
+    Sunday: "Ahad",
+  };
+
+  const monthNum = {
+    Jan: "1",
+    Feb: "2",
+    Mar: "3",
+    Apr: "4",
+    May: "5",
+    Jun: "6",
+    Jul: "7",
+    Aug: "8",
+    Sep: "9",
+    Oct: "10",
+    Nov: "11",
+    Dec: "12",
+  };
+
+  let date = `${data.date[0]}${data.date[1]}`;
+  let month = "";
+  let year = "";
+  for (let i = 0; i < 3; i++) {
+    month = month + data.date[i + 3];
+  }
+
+  for (let i = 0; i < 4; i++) {
+    year = year + data.date[i + 7];
+  }
+
+  let fullDate = hariMal[data.day] + " - " + date + "/" + monthNum[month] + "/" + year;
+  return fullDate;
+};
+
 const displayResult = (w) => {
+  if (results.hasChildNodes()) {
+    results.innerHTML = "";
+  }
+
   const waktuArray = ["Subuh", "Zohor", "Asar", "Maghrib", "Isha'"];
-  const hariMal = { Monday: "Isnin", Tuesday: "Selasa", Wednesday: "Rabu", Thursday: "Khamis", Friday: "Jumaat", Saturday: "Sabtu", Sunday: "Ahad" };
 
   w.map((e) => {
     let masa = [e.fajr, e.dhuhr, e.asr, e.maghrib, e.isha];
     const hari = document.createElement("h3");
-    hari.innerText = hariMal[e.day];
+    const result = document.createElement("div");
+    result.classList.add("result");
     result.append(hari);
+    hari.innerText = checkDate(e);
     for (let i = 0; i < 5; i++) {
       const waktu = document.createElement("p");
       waktu.innerText = `${waktuArray[i]}: ${masa[i].slice(0, masa[i].length - 3)}`;
       result.append(waktu);
     }
+    results.append(result);
   });
 };
 
