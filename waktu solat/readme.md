@@ -1,5 +1,5 @@
 # Waktu Solat Malaysia
-#### Live: https://waktu-solat-malaysia.netlify.app
+#### Live: https://waktu-solat.netlify.app
 
 ### **Base URL:** https://www.e-solat.gov.my/index.php?r=esolatApi/takwimsolat
 
